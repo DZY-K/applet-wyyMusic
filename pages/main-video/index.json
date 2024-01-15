@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "mv_item": "../../components/mv_item/index"
+  },
+  "navigationBarTitleText": "推荐视频",
+  "enablePullDownRefresh":true
+}

@@ -1,0 +1,26 @@
+<!--pages/main-music/index.wxml-->
+<van-search value="{{ inputValue }}" shape="round" background="#fafafa" placeholder="请输入搜索关键词" readonly bind:click-input="onSearchHandle" />
+<!-- 轮播图 -->
+<swiper class="swipeStyle" indicator-dots indicator-color="rgba(225, 225, 225, 0.6)" indicator-active-color="#fff" circular style="height: {{bannerHeight}}px;" autoplay interval="3000">
+  <block wx:for="{{banner}}" wx:key="targetId">
+    <swiper-item class="banner">
+      <image src="{{item.imageUrl}}" mode="widthFix" class="img" bindload="onImgLoad" />
+    </swiper-item>
+  </block>
+</swiper>
+<!-- 歌曲推荐 -->
+<titleMore title="歌曲推荐" bind:moreclick="moreMusic" wx:if="{{ishidden}}"/>
+<view class="recommendSongs" >
+  <block wx:for="{{recommengInfo}}" wx:key="id">
+    <songItem item="{{item}}" />
+  </block>
+</view>
+<!-- 热门歌单 -->
+<titleMore title="热门歌单" bind:moreclick="moreMenus"/>
+<hotSongTag songData="{{tags}}" class="hotTags" Swidth="{{Swidth}}" />
+<!-- 推荐歌单 -->
+<titleMore title="推荐歌单" bind:moreclick="moreMenus" />
+<hotSongTag songData="{{recSongs}}" class="hotTags" Swidth="{{Swidth}}" />
+<!-- 巅峰榜 -->
+<titleMore title="巅峰榜" isMore="false" wx:if="{{ishidden}}"/>
+<rankingSong rankingInfo="{{rankingInfo}}" wx:if="{{ishidden}}"/>

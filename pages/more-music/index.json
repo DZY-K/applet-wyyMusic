@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "rankingItem": "../../components/ranking-item/index",
+    "van-icon": "@vant/weapp/icon/index"
+  }
+}

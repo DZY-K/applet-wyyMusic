@@ -1,0 +1,72 @@
+<!--pages/music-player/index.wxml-->
+<wxs module="formatTime" src="../../utils/format.wxs">
+  
+</wxs>
+<image src="{{songInfo.al.picUrl}}" mode="aspectFill" class="imgBg" />
+<view class="bg"></view>
+<view class="custommNav">
+  <view class="statusH" style="height: {{statusHeight}}px;"></view>
+  <view class="nav">
+    <view class="left">
+      <van-icon name="arrow-left" class="icon" bindtap="backhandle" />
+    </view>
+    <view class="center">
+      <text class="{{currentIndex === 0 ? 'active' : ''}}" bindtap="changeClass">歌曲</text>
+      <text class="text">|</text>
+      <text class="{{currentIndex === 1 ? 'active' : ''}}" bindtap="changeIndex">歌词</text>
+    </view>
+    <view class="right"></view>
+  </view>
+</view>
+<!-- 内容 -->
+<view class="content">
+  <swiper class="swipeStyle" bindchange="changeItem" current="{{currentIndex}}">
+    <swiper-item>
+      <view class="imgStyle">
+        <image src="{{songInfo.al.picUrl}}" mode="widthFix" class="img" />
+      </view>
+      <view class="songInfo">
+        <view class="songName">{{songInfo.name}}</view>
+        <view class="songer">{{songInfo.ar[0].name}}</view>
+      </view>
+      <view class="lyricInfo">
+        <view class="lyric">123</view>
+        <slider 
+        class="slierStyle" 
+        block-size="12" 
+        value="{{currentTimePace}}" 
+        bindchange="changeSlider" 
+        bindchanging="moveSlider"
+        />
+        <view class="lyricTime">
+          <view class="left">{{formatTime.time(currentTime)}}</view>
+          <view class="right">{{formatTime.time(songInfo.dt)}}</view>
+        </view>
+      </view>
+      <view class="playIcon">
+        <view class="palyOrder">
+          <image src="../../assets/player/play_order.png" mode="widthFix" />
+        </view>
+        <view class="playPrev">
+          <image src="../../assets/player/play_prev.png" mode="widthFix" />
+        </view>
+        <view class="playResume" bindtap="playerHandle">
+          <image 
+          src="../../assets/player/play_{{isPlayer ? 'resume' : 'pause'}}.png" 
+          mode="widthFix" 
+          class="img"
+          />
+        </view>
+        <view class="playNext">
+          <image src="../../assets/player/play_next.png" mode="widthFix" />
+        </view>
+        <view class="playList">
+          <image src="../../assets/player/play_music.png" mode="widthFix" />
+        </view>
+      </view>
+    </swiper-item>
+    <swiper-item>
+      456
+    </swiper-item>
+  </swiper>
+</view>

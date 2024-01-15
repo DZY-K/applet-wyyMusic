@@ -1,0 +1,45 @@
+/* components/mv_item/index.wxss */
+.itemStyle {
+  /* width: 20%; */
+margin-bottom: 10rpx;
+margin-top: 20rpx;
+}
+.main {
+  display: flex;
+  overflow: hidden;
+  border-radius: 12rpx;
+  position: relative;
+}
+.imgStyle {
+  width: 100%;
+}
+.info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    font-size: 24rpx;
+    color: #fff;
+}
+.info .playCount {
+  position: relative;
+  margin-left: 20px;
+}
+.info .playCount::before{
+  content: "";
+  position: absolute;
+  left: -35rpx;
+  top: 0rpx;
+  width: 32rpx;
+  height: 32rpx;
+  background-size: cover;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABP0lEQVR4nKWSMU7EMBRExyfARwgn4Ao5Qo7gG5CSMltRgXIEHyEFLRCJioqChtIHoDANbfY5a1uRNlvtk0aTP/97hMQaXclZwbIsFrtHtygRUWJBB2NMmVcMqvC4w5IGDoM2sLPYiGZ2XplawEGH2e1yD+6coNytBYQWGwmdMmQt86wd2HlJPftYCnpsIgjKkH1g/+iRfNYGdhYbyPtSMKaBzwrZO9ZK+kGfKD0IyrD3zK4UTAwdnxWyUlD4RhN65jayH/H6F0wMHZ8Vsr2CNzRwe1awDnxWyErBL3pFD9wEZdivb0pBejwRBGXIvrCInshf8Aq7Rqf/Qi2w2EjglCFrmWftwM7rVBDXggRhh90RHvCLcOcE3HmBQRWWqSRp4CBoA7tG5Lr0Uy5waDEnqZF0gxJ/KEjyPI54xaCrOAKGm6YRhsfynwAAAABJRU5ErkJggg==");
+}
+.duration {
+  margin-right: 10rpx;
+}
+.nameItem {
+  font-size: 28rpx;
+}

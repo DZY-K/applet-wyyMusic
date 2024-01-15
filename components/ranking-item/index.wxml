@@ -1,0 +1,11 @@
+<!--components/ranking-item/index.wxml-->
+<view class="videoInfo" bindtap="songPlay">
+  <view class="index">{{index}}</view>
+    <view class="text">
+      <view class="name">{{item.name}}</view>
+      <view class="singerInfo">
+        <image src="../../assets/icon/sq_icon.png" mode="widthFix" class="img" />
+        <text class="singer">{{item.ar[0].name}}</text>
+      </view>
+  </view>
+</view>

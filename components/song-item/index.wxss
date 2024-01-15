@@ -1,0 +1,33 @@
+/* components/song-item/index.wxss */
+/* 歌曲推荐 */
+.videoInfo {
+  display: flex;
+}
+.videoInfo .imgInfo {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 12rpx;
+  overflow: hidden;
+  margin-right: 15rpx;
+  margin-bottom: 25rpx;
+}
+.videoInfo .imgInfo .img {
+  width: 100%;
+}
+.videoInfo .info {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.videoInfo .info .icon {
+  color: #999999;
+}
+.videoInfo .info .text .name {
+  color: #666;
+  margin-bottom: 15rpx;
+}
+.videoInfo .info .text .singerInfo {
+  font-size: 20rpx;
+  color: #999999;
+}

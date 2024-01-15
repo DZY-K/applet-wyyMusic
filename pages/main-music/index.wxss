@@ -1,0 +1,19 @@
+/* pages/main-music/index.wxss */
+page {
+  background-color: #fafafa;
+  --search-background-color: #ffffff;
+  --padding-sm: 12px;
+  --search-padding: 10px 0;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+}
+.banner {
+  border-radius: 12rpx;
+  overflow: hidden; 
+}
+.banner .img{
+  width: 100%;
+  
+}
+
+/* 热门歌单 */

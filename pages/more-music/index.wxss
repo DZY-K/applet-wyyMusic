@@ -1,0 +1,116 @@
+/* pages/more-music/index.wxss */
+.songList,
+.tilte {
+  padding: 0 20rpx;
+  box-sizing: border-box;
+}
+
+.tilte {
+  margin: 20rpx 0;
+  font-weight: 600;
+}
+
+.menuSong {
+  position: relative;
+  width: 100%;
+  height: 500rpx;
+  overflow: hidden;
+  /* background-color: darkcyan; */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* filter: blur(2px); */
+  /* padding: 70rpx 60rpx; */
+  box-sizing: border-box;
+}
+
+.bg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgb(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.top {
+  position: absolute;
+  top: 70rpx;
+  /* left: 50%; */
+  left: 0;
+  width: 100%;
+  /* transform: translate(-50%); */
+  display: flex;
+  align-items: center;
+  padding: 0 60rpx;
+  box-sizing: border-box;
+  z-index: 99;
+
+}
+
+.top .imgStyle {
+  width: 350rpx;
+  height: 100%;
+  overflow: hidden;
+
+}
+
+.top .imgStyle .img {
+  width: 100%;
+  height: 100%;
+  border-radius: 15rpx;
+}
+
+.top .info {
+  color: #ffffff;
+  margin-left: 50rpx;
+  box-sizing: border-box;
+}
+
+.top .info .nickname {
+  margin: 30rpx 0;
+}
+
+.top .info .nickname .avatarImg {
+  width: 60rpx;
+  height: 60rpx;
+  background-color: #ffffff;
+  border-radius: 30rpx;
+  vertical-align: middle;
+  margin-right: 20rpx;
+}
+
+.top .info .nickname .miniName {
+  font-size: 25rpx;
+}
+
+.top .info .des {
+  width: 330rpx;
+  box-sizing: border-box;
+  overflow: hidden;
+  /*超出部分隐藏*/
+  white-space: nowrap;
+  /*禁止换行*/
+  text-overflow: ellipsis;
+  /*省略号*/
+  font-size: 25rpx;
+}
+
+.bottom {
+  position: absolute;
+  bottom: 75rpx;
+  left: 50%;
+  transform: translate(-50%);
+  width: 500rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #ffffff;
+  z-index: 9;
+}
+.bottom .icon {
+  font-size: 50rpx;
+  vertical-align: bottom;
+  margin-right: 7rpx;
+}

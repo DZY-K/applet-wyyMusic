@@ -1,0 +1,23 @@
+/* components/title-more/index.wxss */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30rpx 0;
+  box-sizing: border-box;
+}
+.title {
+  font-weight: 600;
+}
+.more {
+  font-size: 25rpx;
+  color: #999999;
+  
+}
+.more .icon {
+  font-size: 35rpx;
+  vertical-align: bottom;
+}
+.more .text {
+  vertical-align: middle;
+}

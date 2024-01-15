@@ -1,0 +1,12 @@
+{
+  "usingComponents": {
+    "van-search": "@vant/weapp/search/index",
+    "titleMore": "../../components/title-more/index",
+    "van-icon": "@vant/weapp/icon/index",
+    "van-loading": "@vant/weapp/loading/index",
+    "hotSongTag": "../../components/hot-songtag/index",
+    "rankingSong": "/components/ranking-song",
+    "songItem": "/components/song-item/index"
+  },
+  "navigationBarTitleText": "热门音乐"
+}

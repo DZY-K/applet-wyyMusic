@@ -1,0 +1,30 @@
+// 格式化播放量
+function  formatCount(count, text="") {
+  if (count >= 100000000) {
+    return count = (count / 100000000).toFixed(1) + "亿" + text
+  }else if ( count >= 10000 ) {
+    return count = (count / 10000).toFixed(1) + "万" + text
+  }
+  return count + text
+}
+
+// 格式化 播放时间
+function time(tim) {
+  // 毫秒转换秒
+  tim = tim / 1000
+  // 分钟
+  var minute = Math.floor(tim / 60)
+  // 剩余秒数
+  var second = Math.floor(tim % 60)
+  return patch(minute) + ":" + patch(second)
+}
+// 分钟补零
+function patch(time) {
+  time = time + ''
+  return ("00" + time).slice(time.length)
+}
+
+module.exports = {
+  formatCount: formatCount,
+  time: time
+}

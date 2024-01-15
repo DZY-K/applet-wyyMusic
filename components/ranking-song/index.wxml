@@ -1,0 +1,27 @@
+<!--components/ranking-song/index.wxml-->
+<wxs module="format" src="../../utils/format.wxs"></wxs>
+<view class="rankings">
+<block wx:for="{{rankingInfo}}" wx:key="id">
+  <view class="rankItem" bindtap="clickSkip" data-key="{{index}}">
+    <view class="left">
+      <view class="title">{{item.name}}</view>
+      <view class="songs">
+        <block wx:for="{{3}}"  wx:key="*this" wx:for-item="iten">
+          <view class="songInfo">
+            <text>{{iten + 1}}. </text>
+            <text>{{item.tracks[iten].name}}</text>
+            <text> - </text>
+            <text>{{item.tracks[iten].ar[0].name}}</text>
+          </view>
+        </block>
+      </view>
+    </view>
+    <view class="right">
+      <view class="imgStyle">
+        <image src="{{item.coverImgUrl}}" mode="widthFix" class="img"/>
+      </view>
+      <view class="count">{{format.formatCount(item.playCount)}}</view>
+    </view>
+  </view>
+</block>
+</view>

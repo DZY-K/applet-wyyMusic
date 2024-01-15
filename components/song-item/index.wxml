@@ -1,0 +1,16 @@
+<!--components/song-item/index.wxml-->
+<view class="videoInfo" bindtap="songPlay" >
+      <view class="imgInfo">
+        <image src="{{item.al.picUrl}}" mode="widthFix" class="img" />
+      </view>
+      <view class="info">
+        <view class="text">
+          <view class="name">{{item.name}}</view>
+          <view class="singerInfo">
+            <text class="singer">{{item.ar[0].name}}</text>
+            <text> · {{item.al.name}}</text>
+          </view>
+        </view>
+        <van-icon name="arrow" class="icon"/>
+      </view>
+    </view>

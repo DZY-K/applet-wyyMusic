@@ -1,0 +1,26 @@
+/* components/ranking-item/index.wxss */
+.videoInfo {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin: 30rpx 0;
+}
+.index {
+  padding-right: 30rpx;
+  box-sizing: border-box;
+}
+.text .name{
+  font-size: 30rpx;
+  font-weight: initial;
+  color: #000;
+}
+.singerInfo .img{
+  width: 45rpx;
+  height: 45rpx;
+  margin-right: 10rpx;
+  vertical-align: middle;
+}
+.singerInfo .singer {
+  font-size: 25rpx;
+  color: #666666;
+}

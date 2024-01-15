@@ -1,0 +1,42 @@
+/* components/ranking-song/index.wxss */
+.rankItem {
+  height: 230rpx;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20rpx;
+  background-color: #E9E9E9;
+  border-radius: 12rpx;
+  overflow: hidden;
+  padding-left: 30rpx;
+}
+.rankItem .left .title {
+  margin-top: 30rpx;
+}
+.rankItem .left .songs {
+  font-size: 25rpx;
+  margin-top: 10rpx;
+}
+.rankItem .left .songs .songInfo {
+ margin: 10rpx 0;
+}
+.rankItem .right {
+  position: relative;
+}
+.rankItem .right .imgStyle{
+  width: 230rpx;
+  
+}
+.rankItem .right .imgStyle .img {
+  width: 100%;
+}
+.rankItem .right .count {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  color: #fff;
+  background-color: rgb(0, 0, 0, 0.6);
+  border-radius: 7rpx;
+  padding: 7rpx;
+  font-size: 25rpx;
+  box-sizing: border-box;
+}

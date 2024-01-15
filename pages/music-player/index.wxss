@@ -1,0 +1,168 @@
+/* pages/music-player/index.wxss */
+page {
+  position: relative;
+  /* background-color: #000000; */
+}
+
+.imgBg,
+.bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+
+}
+
+.bg {
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10rpx);
+  /* z-index: 1; */
+  transform: translate(1.5);
+  overflow: hidden;
+}
+
+.nav {
+  display: flex;
+  height: 44px;
+  align-items: center;
+
+}
+
+.nav .left,
+.nav .right {
+  width: 120rpx;
+}
+
+.nav .left .icon {
+  font-size: 38rpx;
+  color: #ffffff;
+}
+
+.nav .center {
+  flex: 1;
+  font-size: 28rpx;
+  color: #AC9E94;
+}
+
+.nav .center .text {
+  margin: 0 10rpx;
+}
+
+.left,
+.right,
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.active {
+  color: #ffffff;
+}
+
+.content {
+  padding: 0 60rpx;
+  margin-top: 25rpx;
+  box-sizing: border-box;
+  color: #ffffff;
+}
+
+.swipeStyle {
+  height: 100vh;
+}
+
+.swipeStyle .imgStyle {
+  /* width: 650rpx; */
+  /* margin: 0 auto; */
+  overflow: hidden;
+
+}
+
+.swipeStyle .imgStyle .img {
+  width: 100%;
+  border-radius: 12rpx;
+}
+
+.songInfo {
+  margin-top: 30rpx;
+  color: #fff;
+}
+
+.songInfo .songName {
+  font-size: 50rpx;
+  font-weight: 600;
+  margin-bottom: 10rpx;
+}
+
+.songInfo .songer {
+  font-size: 25rpx;
+}
+
+.lyricInfo {
+  margin-top: 30rpx;
+}
+
+.lyricInfo .lyric {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.lyricInfo .lyricTime {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 25rpx;
+}
+
+.lyricInfo .slierStyle {
+  margin: 18rpx 12rpx 15rpx 10rpx;
+}
+
+.playIcon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30rpx;
+}
+
+.playIcon .palyOrder {
+  width: 80rpx;
+  height: 80rpx;
+}
+
+image {
+  width: 100%;
+}
+
+.playIcon .playPrev {
+  width: 70rpx;
+  height: 70rpx;
+}
+
+.playIcon .playResume {
+  position: relative;
+  width: 120rpx;
+  height: 120rpx;
+}
+.playIcon .playResume .img {
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+}
+.playIcon .playNext {
+  width: 70rpx;
+  height: 70rpx;
+}
+
+.playIcon .playList {
+  width: 65rpx;
+  height: 65rpx;
+}

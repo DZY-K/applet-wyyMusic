@@ -1,0 +1,37 @@
+<!--pages/more-music/index.wxml-->
+<wxs module="format" src="../../utils/format.wxs">
+  
+</wxs>
+<view class="menuSong" wx:if="{{type === 'menuSong' && songMenuData.name}}" style="background-image: url({{songMenuData.creator.backgroundUrl}})">
+  <view class="top">
+    <view class="imgStyle">
+      <image src="{{songMenuData.coverImgUrl}}" mode="widthFix" class="img" />
+    </view>
+    <view class="info">
+      <view class="name">{{songMenuData.name}}</view>
+      <view class="nickname">
+        <image src="{{songMenuData.creator.avatarUrl}}" mode="widthFix" class="avatarImg" />
+        <text class="miniName">{{songMenuData.creator.nickname}}</text>
+      </view>
+      <view class="des">简介: {{songMenuData.description}}</view>
+    </view>
+  </view>
+  <view class="bottom">
+  <view class="count">
+    <van-icon name="like-o" class="icon"/>
+    <text class="num">{{format.formatCount(songMenuData.playCount)}}</text>
+  </view>
+  <view class="share">
+  <van-icon name="share-o" class="icon" />
+  <text>分享</text>
+  </view>
+  </view>
+  <view class="bg"></view>
+</view>
+
+<view class="tilte" wx:else>{{songMenuData.name}}</view>
+<view class="songList">
+  <block wx:for="{{songMenuData.tracks}}" wx:key="id">
+    <rankingItem item="{{item}}" index="{{index + 1}}" />
+  </block>
+</view>

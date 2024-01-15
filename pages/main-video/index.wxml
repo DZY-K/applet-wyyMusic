@@ -1,0 +1,6 @@
+<!--pages/main-video/index.wxml-->
+<view class="mvList">
+  <block wx:for="{{mvList}}" wx:key="id">
+    <mv_item mvItem="{{item}}" class="item"/>
+  </block>
+</view>

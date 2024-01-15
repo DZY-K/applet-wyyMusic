@@ -1,0 +1,22 @@
+<!--components/hot-songtag/index.wxml-->
+<wxs module="format" src="../../utils/format.wxs">
+  
+</wxs>
+<scroll-view 
+scroll-x 
+class="hotSong"  
+enable-flex
+style="width: {{Swidth}}px;"
+>
+  <block wx:for="{{songData}}" wx:key="id" >
+    <view class="tags" bindtap="menuSkip" data-id="{{item.id}}">
+      <view class="imgStyle">
+        <image src="{{item.coverImgUrl}}" mode="widthFix" class="img"/>
+        <view class="count">{{format.formatCount(item.playCount)}}</view>
+      </view>
+      <view class="tagName">
+        {{item.name}}
+      </view>
+    </view>
+  </block>
+</scroll-view>

@@ -1,0 +1,19 @@
+<!--components/mv_item/index.wxml-->
+<wxs module="format" src="../../utils/format.wxs" />
+  
+<view class="itemStyle">
+  <view class="main">
+    <image 
+      src="{{mvItem.cover}}"
+      alt="mv图片"
+      mode="widthFix"
+      class="imgStyle"
+      bindtap="clickImgHandle"
+       />
+    <view class="info">
+      <view class="playCount">{{format.formatCount(mvItem.playCount)}}</view>
+      <view class="duration">{{format.time(mvItem.mv.videos[0].duration)}}</view>
+    </view>
+  </view>
+  <view class="nameItem">{{mvItem.name}}</view>
+</view>

@@ -1,0 +1,35 @@
+{
+  "pages": [
+    "pages/main-music/index",
+    "pages/main-video/index",
+    "pages/detail-video/index",
+    "pages/search-music/index",
+    "pages/more-music/index",
+    "pages/more-menus/index",
+    "pages/music-player/index"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/main-music/index",
+        "text": "音乐",
+        "iconPath": "assets/tabBar/music_normal.png",
+        "selectedIconPath": "assets/tabBar/music_active.png"
+      },
+      {
+        "pagePath": "pages/main-video/index",
+        "text": "视频",
+        "iconPath": "assets/tabBar/video_normal.png",
+        "selectedIconPath": "assets/tabBar/video_active.png"
+      }
+    ]
+  },
+  "componentFramework": "glass-easel",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}

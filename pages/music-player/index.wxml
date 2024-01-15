@@ -8,19 +8,19 @@
   <view class="statusH" style="height: {{statusHeight}}px;"></view>
   <view class="nav">
     <view class="left">
-      <van-icon name="arrow-left" class="icon" bindtap="backhandle" />
+      <van-icon name="arrow-left" class="icon" bindtap="onBackTap" />
     </view>
     <view class="center">
-      <text class="{{currentIndex === 0 ? 'active' : ''}}" bindtap="changeClass">歌曲</text>
+      <text class="{{currentPage === 0 ? 'active' : ''}}" bindtap="changeClass">歌曲</text>
       <text class="text">|</text>
-      <text class="{{currentIndex === 1 ? 'active' : ''}}" bindtap="changeIndex">歌词</text>
+      <text class="{{currentPage === 1 ? 'active' : ''}}" bindtap="changeIndex">歌词</text>
     </view>
     <view class="right"></view>
   </view>
 </view>
 <!-- 内容 -->
 <view class="content">
-  <swiper class="swipeStyle" bindchange="changeItem" current="{{currentIndex}}">
+  <swiper class="swipeStyle" bindchange="changeItem" current="{{currentPage}}">
     <swiper-item>
       <view class="imgStyle">
         <image src="{{songInfo.al.picUrl}}" mode="widthFix" class="img" />
@@ -34,13 +34,13 @@
         <slider 
         class="slierStyle" 
         block-size="12" 
-        value="{{currentTimePace}}" 
+        value="{{sliderValue}}" 
         bindchange="changeSlider" 
         bindchanging="moveSlider"
         />
         <view class="lyricTime">
           <view class="left">{{formatTime.time(currentTime)}}</view>
-          <view class="right">{{formatTime.time(songInfo.dt)}}</view>
+          <view class="right">{{formatTime.time(durationTime)}}</view>
         </view>
       </view>
       <view class="playIcon">
@@ -50,9 +50,9 @@
         <view class="playPrev">
           <image src="../../assets/player/play_prev.png" mode="widthFix" />
         </view>
-        <view class="playResume" bindtap="playerHandle">
+        <view class="playResume" bindtap="onPlayOrPauseTap">
           <image 
-          src="../../assets/player/play_{{isPlayer ? 'resume' : 'pause'}}.png" 
+          src="../../assets/player/play_{{isPlaying ? 'pause' : 'resume'}}.png" 
           mode="widthFix" 
           class="img"
           />
